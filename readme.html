@@ -47,12 +47,12 @@ You can also Download, and Delete the ZIP archives with the SQL backup.
 <ol>
  <li>Copy the "<span class="sb">sbmd</span>" folder on your server (with all its content).</li>
  <li>Set CHMOD 0755 (or 0777) permissions to the "<span class="sb">backup/</span>" folder on your server (it is used to store the ZIP files with the SQL backup).</li>
- <li>Access the "<span class="sb">sbmd/backupmysql.php</span>" file in your browser, with the address from server; for example: <span class="sbi">http://localhost/sbmd/backupmysql.php</span></li>
+ <li>Access the "<span class="sb">sbmd/bkmysql.php</span>" file in your browser, with the address from server; for example: <span class="sbi">http://localhost/sbmd/bkmysql.php</span></li>
  <li>Add your connection data (MySQL server, Username, Password, Database name) to connect to your MySQL database. Then you can backup MySQL tables, and restore, download or delete the backup.</li>
 </ol>
 <h3>Other Specifications</h3>
-&bull; If you want to save the ZIP files in other directory on your server, modify the value of the <span class="sb">$dir</span> variable in the "backupmysql.php" file (line 5).<br><br>
-&bull; If you want to use the script in other language, translate the texts from the <span class="sb">lang_en.json</span> file and save it in other "lang_...json" file, with the indice of the language, for example for Chinese save the texts in the "lang_ch.json". The texts in the ".json" file must be stored in valid JSON format. Then, change the value of the <span class="sb">$lang</span> variable in the "backupmysql.php" file (line 4) with the same indice (<span class="sbi">$lang ='ch';</span>).
+&bull; If you want to save the ZIP files in other directory on your server, modify the value of the <span class="sb">$dir</span> variable in the "bkmysql.php" file (line 5).<br><br>
+&bull; If you want to use the script in other language, translate the texts from the <span class="sb">lang_en.json</span> file and save it in other "lang_...json" file, with the indice of the language, for example for Chinese save the texts in the "lang_ch.json". The texts in the ".json" file must be stored in valid JSON format. Then, change the value of the <span class="sb">$lang</span> variable in the "bkmysql.php" file (line 4) with the same indice (<span class="sbi">$lang ='ch';</span>).
 <h3>Advanced Usage</h3>
 - If you want to use the <span class="sb">backupmysql</span> class into a CMS or other PHP project, include the <span class="sb">backupmysql.class.php</span> file in your project.<br>
 - The object instance of the backupmysql class requires two arguments: the indice of the language (used for the "lang_...json" file; default "en"), and the directory name where the backup files are saved (default "backup/").<br>
